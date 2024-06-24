@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    /*Фіксована*/
+    /* width: 1000px; */
+    /**/
+    /*Гумова*/
+    max-width: 1000px;
+    /**/
+    margin: 10px auto;
+    border: 1px solid black;
+    font-family: "Reddit Mono", monospace;
+}
+.header {
+    padding: 20px 10px;
+}
+.nav ul{
+    list-style: none;
+    margin: auto;
+    display: flex;
+    gap: 15px;
+   justify-content: center;
+   align-items: center; 
+}
+.nav > ul > li {
+    padding: 10px 10px;
+    background-color: black;
+}
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+.nav > ul > li {
+    position: relative;
+}
+.nav ul li > ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+}
+.nav > ul > li:hover ul{
+    display: block;
+}
+.main {
+    background-color: green;
+}
+.main .title {
+    text-align: center;
+    font-size: 24px;
+    padding: 15px 0 20px 0;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    background-color: gray;
+}
+.col{
+    width: 22%;
+    padding: 10px;
+    background-color: white;
+}
+.col h3 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.col p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.col img {
+    width: 100%;
+}
+.picture .pic-content {
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+}
+.pic-content img {
+    width: 30%;
+    margin: 0px 10%;
+}
+.footer{
+    height: 100px;
+    background-color: yellow;
+}
+.part-content {
+    display: flex;
+    height: 250px;
+    justify-content: space-between;
+}
+.part-content img {
+    width: 30%;
+    margin-left: 150px;
+    margin-bottom: 20px;
+}
+.part-content .text {
+    width: 45%;
+    padding: 10px;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+    /* display: none; */
+}
+table td, table th {
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.pageh1, .pageh2 {
+    text-align: center;
+    margin: 5px 0px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    font-family: "Fjalla One", sans-serif;
+}
+.header .logo{
+    height: 55px;
+    margin-bottom: -45px;
+    margin-left: 1%;
+}
+
+.menu-mobicon {
+    display: none;
+}
+
+@media screen and (max-width: 500px){
+    .content {
+        flex-wrap: wrap;
+    }
+    .col {
+        width: 100%;
+    }
+    .nav > ul {
+        display: none;
+    }
+    .menu-mobicon {
+        display: block;
+        width: 70px;
+        height: 70px;
+    }
+    .nav ul li > ul{
+        display: block;
+        position: static;
+        margin-left: 10px;
+    }
+    .header .logo{
+        display: none;
+    }
+}
+@media screen and (max-width: 720px){
+    .header .logo{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 900px){
+    .content {
+        flex-wrap: wrap;
+    }
+    .col {
+        width: 45%;
+    }
+    .pic-content img {
+        width: 25%;
+    }
+    .pic-content {
+        justify-content: center!important;
+        gap: 30px;
+    }
+
+}
